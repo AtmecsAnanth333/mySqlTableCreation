@@ -1,0 +1,33 @@
+use mydaybydaycodes;
+create table employeeDetails1(
+empId int primary key,
+employeeName varchar(50),
+jobdesicnation varchar(50),
+salary int
+
+);
+insert into employeeDetails1 values(1,"Anand","tester",22000);
+insert into employeeDetails1 values(2,"sabari","developer",42000);
+insert into employeeDetails1 values(3,"Ananth","PlaywrightQA tester",50000);
+insert into employeeDetails1 values(4,"John","Full stack Deeloper",50000);
+insert into employeeDetails1 values(5,"Dhurai","tester",32000);
+insert into employeeDetails1 values(6,"Bhasith","tester",32000);
+
+select * from employeeDetails1
+WHERE employeeName="John";
+
+select empId,employeeName  from employeeDetails1
+WHERE employeeName="Ananth";
+
+select * from employeeDetails1
+WHERE salary>40000;
+
+select * from employeeDetails1
+WHERE salary>20000 and jobdesicnation="tester";
+
+select * from employeeDetails1
+WHERE salary>30000 and jobdesicnation="developer";
+
+UPDATE employeeDetails1
+set jobdesicnation="QA"
+WHERE jobdesicnation="tester";
